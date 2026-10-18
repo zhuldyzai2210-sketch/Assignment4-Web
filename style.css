@@ -1,0 +1,365 @@
+
+:root {
+  --green: #0F6B5F;
+  --orange: #F2A93B;
+  --dark: #16302B;
+  --background: #F4F7F5;
+  --soft-green: #E6EFEC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark);
+  background: var(--background);
+}
+
+
+
+
+
+
+
+
+.train-page {
+  min-height: 100vh;
+}
+
+.ticket-card {
+  max-width: 950px;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(15, 107, 95, 0.16);
+}
+
+.ticket-header {
+  background: var(--green);
+  color: white;
+  padding: 28px 35px;
+}
+
+.ticket-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ticket-form {
+  padding: 38px;
+}
+
+.form-label,
+legend.form-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+  background: var(--background);
+  border: 1px solid var(--soft-green);
+  border-radius: 10px;
+  padding: 13px;
+  color: var(--dark);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 0.2rem rgba(15, 107, 95, 0.13);
+}
+
+.input-group-text {
+  background: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+  border-radius: 10px 0 0 10px;
+}
+
+.trip-options {
+  display: inline-flex;
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.trip-btn {
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 0;
+  color: var(--green);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-check:checked + .trip-btn {
+  background: var(--green);
+  color: white;
+}
+
+.btn-check:focus-visible + .trip-btn {
+  outline: 3px solid var(--orange);
+  outline-offset: -3px;
+}
+
+.form-check-input:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.form-check-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 0.2rem rgba(15, 107, 95, 0.2);
+}
+
+.form-check-label {
+  font-size: 14px;
+}
+
+.clear-btn {
+  background: white;
+  border: 1px solid var(--green);
+  color: var(--green);
+  border-radius: 12px;
+  padding: 12px 26px;
+  font-weight: 600;
+}
+
+.clear-btn:hover {
+  background: var(--soft-green);
+  border-color: var(--green);
+}
+
+.find-btn {
+  background: var(--orange);
+  border: 1px solid var(--orange);
+  color: var(--dark);
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 700;
+}
+
+.find-btn:hover {
+  background: #e89a24;
+  border-color: #e89a24;
+}
+
+
+@media (max-width: 575.98px) {
+  .train-page .container {
+    padding: 15px !important;
+  }
+
+  .ticket-card {
+    border-radius: 14px;
+  }
+
+  .ticket-header {
+    padding: 22px;
+  }
+
+  .ticket-header h1 {
+    font-size: 20px;
+  }
+
+  .ticket-form {
+    padding: 22px;
+  }
+
+  .trip-options {
+    display: flex;
+  }
+
+  .trip-btn {
+    flex: 1;
+    text-align: center;
+    padding: 11px 8px;
+  }
+
+  .ticket-actions {
+    flex-direction: column-reverse;
+  }
+
+  .ticket-actions .btn {
+    width: 100%;
+  }
+}
+
+.form-check-input {
+  border: 1px solid #8ca9a2;
+}
+
+
+
+
+
+
+
+.hack-page {
+  background: #eef4f1;
+  min-height: 100vh;
+}
+
+.hack-card {
+  max-width: 850px;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(15, 107, 95, 0.12);
+}
+
+.hack-header {
+  background: linear-gradient(135deg, #0F6B5F, #16302B);
+  color: white;
+  padding: 35px;
+}
+
+.hack-header h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+}
+
+.hack-header p:first-child {
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.hack-form {
+  padding: 35px;
+}
+
+.hack-submit {
+  background: var(--orange);
+  color: var(--dark);
+  border-radius: 12px;
+  padding: 15px;
+  font-weight: 700;
+}
+
+.hack-submit:hover {
+  background: #e89a24;
+}
+
+
+.hack-form .form-control:user-invalid,
+.hack-form .form-select:user-invalid,
+.hack-form .form-check-input:user-invalid {
+  border-color: #dc3545;
+}
+
+.hack-form .form-control:user-invalid ~ .invalid-feedback,
+.hack-form .form-select:user-invalid ~ .invalid-feedback,
+.hack-form .form-check-input:user-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.hack-form .form-control:user-valid,
+.hack-form .form-select:user-valid {
+  border-color: #198754;
+}
+
+@media (max-width: 575.98px) {
+  .hack-header {
+    padding: 25px;
+  }
+
+  .hack-form {
+    padding: 22px;
+  }
+}
+
+.hack-form fieldset:has(input:user-invalid)
+.experience-error {
+  display: block;
+  color: #dc3545;
+}
+
+
+
+
+
+
+.cafe-page {
+  min-height: 100vh;
+  background: #f7f1e9;
+}
+
+.cafe-card {
+  max-width: 780px;
+  background: #fffdf9;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(75, 55, 35, 0.12);
+}
+
+.cafe-header {
+  background: #4c624f;
+  color: white;
+  padding: 40px 25px;
+}
+
+.cafe-header h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+}
+
+.cafe-subtitle {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #e9d4ac;
+}
+
+.cafe-header p:last-child {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.cafe-form {
+  padding: 38px;
+}
+
+.cafe-page .form-control:focus,
+.cafe-page .form-select:focus {
+  border-color: #4c624f;
+  box-shadow: 0 0 0 0.2rem rgba(76, 98, 79, 0.15);
+}
+
+.cafe-page .form-check-input:checked {
+  background-color: #4c624f;
+  border-color: #4c624f;
+}
+
+.cafe-submit {
+  background: #4c624f;
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  font-weight: 700;
+}
+
+.cafe-submit:hover {
+  background: #344a37;
+  color: white;
+}
+
+.cafe-footer {
+  padding: 20px;
+  background: #f2e9db;
+  color: #4c624f;
+  font-size: 13px;
+}
+
+@media (max-width: 575.98px) {
+  .cafe-form {
+    padding: 22px;
+  }
+
+  .cafe-header {
+    padding: 30px 20px;
+  }
+}
